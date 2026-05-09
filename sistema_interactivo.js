@@ -16,6 +16,6 @@ let mensaje_error_dato = "hubo un error al colocar el dato de la edad cargue la 
 
 /*impresion de mensaje segun la edad */
 
-let mensaje = edad < 18 ? alert(mensaje_menor) : edad >= 18 ? alert(mensaje_mayor) : alert(mensaje_error_dato)
+let mensaje = edad > 0 && edad < 18 ? alert(mensaje_menor) : edad >= 18 ? alert(mensaje_mayor) : alert(mensaje_error_dato)
 
 
