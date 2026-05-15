@@ -1,7 +1,4 @@
 
-
-
-
 // objeto de productos
 let productos = [
     {"id": 1 , "nombre": "zapato", "precio": 5000},
@@ -67,3 +64,35 @@ for (const element of numeros_repetidos) {
 
 // recorrer map con for each
 
+categoriasProductos.forEach((valor,clave) =>{
+    console.log(`Clave: ${clave}, Valor: ${valor}`);
+}
+)
+
+// validacion de productos 
+
+productos.forEach((producto, index) => {
+    // 1. Validar ID (debe existir y ser un número)
+    const idValido = typeof producto.id === 'number' && !isNaN(producto.id);
+    
+    // 2. Validar Nombre (debe existir, ser texto y no estar vacío)
+    const nombreValido = typeof producto.nombre === 'string' && producto.nombre.trim() !== "";
+    
+    // 3. Validar Precio (debe existir, ser un número positivo)
+    const precioValido = typeof producto.precio === 'number' && producto.precio >= 0;
+
+    // Resultado de la validación
+    if (idValido && nombreValido && precioValido) {
+        console.log(`✅ Producto en posición ${index} es válido: ${producto.nombre}`);
+    } else {
+        console.error(`❌ Error en posición ${index}: Datos inválidos.`, { idValido, nombreValido, precioValido });
+    }
+});
+
+//utilizacion de object en los productos
+
+console.log("valores "+Object.values(productos)); 
+
+console.log("claves "+Object.keys(productos)); 
+
+console.log("claves y valores "+Object.entries(productos)); 
