@@ -22,10 +22,14 @@ git clone -b H2 https://github.com/Dan623280/Historia_de_usario_js.git
 ```
 ------------------------------------------------------------------------
 ## Estructtura
+
+``` tree
 .
 ├── gestion_datos.js
 ├── image.png
 └── README.md
+
+```
 
 ------------------------------------------------------------------------
 
