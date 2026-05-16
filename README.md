@@ -20,6 +20,12 @@ Para trabajar en este proyecto, sigue estos pasos:
 git clone -b H2 https://github.com/Dan623280/Historia_de_usario_js.git
 
 ```
+------------------------------------------------------------------------
+## Estructtura
+.
+├── gestion_datos.js
+├── image.png
+└── README.md
 
 ------------------------------------------------------------------------
 
