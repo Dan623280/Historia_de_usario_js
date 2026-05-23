@@ -43,6 +43,8 @@ Una vez en la rama correcta, abre el archivo "index.html" y recorrerlo en vscode
 
 ##  ▶️ Elementos visibles de la interfaz
 
+![alt text](image.png)
+
 - título de la aplicación.
 - campo de texto (input) para escribir notas.
 - botón “Agregar” para añadir nuevas notas.
@@ -51,6 +53,9 @@ Una vez en la rama correcta, abre el archivo "index.html" y recorrerlo en vscode
 
 ## Funcionalidad de la pagina
 
+![alt text](image-1.png)
+
+![alt text](image-2.png)
 - Agregar notas
 
     El usuario puede escribir una nota y presionar el botón Agregar.
