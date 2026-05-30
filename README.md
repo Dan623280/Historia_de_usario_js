@@ -1,23 +1,31 @@
-# Mini App de Gestión de Notas
+# Gestión de Productos
 
 
 -------------------------------------------------------------------------
 
 ## 📌 Descripcion
 
-Esta aplicación permite agregar y eliminar notas dinámicamente utilizando manipulación del DOM con JavaScript. Además, las notas se guardan automáticamente en Local Storage, permitiendo que la información permanezca disponible incluso después de recargar la página.
+La aplicación permite gestionar productos mediante operaciones CRUD (Crear, Leer, Actualizar y Eliminar), utilizando JavaScript, Local Storage y JSON Server como API simulada.
 
 ------------------------------------------------------------------------
 
+## 📌 Requisitos
+
+Antes de utilizar la aplicación, asegúrese de tener instalado:
+
+Node.js
+JSON Server
+
+-------------------------------------------------------------------------
+
 ## 🚀 ¿Cómo acceder al proyecto?
 
-Para trabajar en este proyecto, sigue estos pasos:
 
 ### 1. Clona el repositorio
 
 ``` bash
 
-git clone -b H3 https://github.com/Dan623280/Historia_de_usario_js.git
+git clone -b H4 https://github.com/Dan623280/Historia_de_usario_js.git
 
 ```
 ------------------------------------------------------------------------
@@ -25,61 +33,88 @@ git clone -b H3 https://github.com/Dan623280/Historia_de_usario_js.git
 
 ``` tree
 .
+├── css
+│   └── style.css
+├── db.json
 ├── index.html
-├── README.md
-├── script.js
-└── style.css
+├── js
+│   ├── api.js
+│   ├── app.js
+│   ├── dom.js
+│   └── storage.js
+└── README.md
+
+
 
 ```
 
 ------------------------------------------------------------------------
 
 
-## ▶️Ejecuta index.html
+## Inicialización del proyecto
 
-Una vez en la rama correcta, abre el archivo "index.html" y recorrerlo en vscode
+1. Abrir una terminal en la carpeta del proyecto.
+2. Ejecutar el siguiente comando para iniciar la API:
+
+``` bash
+json-server --watch db.json --port 3000
+
+```
 
 ------------------------------------------------------------------------
 
-##  ▶️ Elementos visibles de la interfaz
+##  Funcionalidades
 
 ![alt text](image.png)
 
-- título de la aplicación.
-- campo de texto (input) para escribir notas.
-- botón “Agregar” para añadir nuevas notas.
-- lista donde aparecen las notas creadas.
+### Agregar Producto
+
+1. Ingresar el nombre del producto.
+2. Ingresar el precio.
+3. Presionar el botón Agregar Producto.
+4. El producto se almacenará en:
+   - La interfaz gráfica.
+   - Local Storage.
+   - La API (db.json).
 
 
-## Funcionalidad de la pagina
+### Editar producto
+1. Presionar el botón Editar del producto deseado.
+2. Ingresar el nuevo nombre.
+3. Ingresar el nuevo precio.
+4. Confirmar los cambios.
+5. La información se actualizará en la aplicación y en la API.
 
-![alt text](image-1.png)
 
-![alt text](image-2.png)
-- Agregar notas
+### Eliminar producto
+1. Presionar el botón Eliminar del producto deseado.
+2. El producto será removido de:
+3. La interfaz.
+    - Local Storage.
+    - La API.
 
-    El usuario puede escribir una nota y presionar el botón Agregar.
-    La nota aparece inmediatamente en pantalla sin recargar la página.
+## Persistencia de datos
 
-- Validación de campos
+La aplicación utiliza Local Storage para mantener los datos almacenados en el navegador y JSON Server para simular una base de datos externa.
 
-    Si el usuario intenta agregar una nota vacía, aparece un mensaje indicando que debe escribir una nota.
 
-- Eliminar notas
+## Tecnologías utilizadas
 
-    Cada nota tiene un botón Eliminar que permite borrarla dinámicamente del DOM.
+- HTML5
+- CSS3
+- JavaScript ES6+
+- Local Storage
+- Fetch API
+- JSON Server
 
-- Persistencia de datos
 
-    Las notas permanecen guardadas incluso después de recargar o cerrar la página gracias al uso de Local Storage.
+## Operaciones CRUD implementadas
 
+- GET: Obtener productos.
+- POST: Crear productos.
+- PUT: Actualizar productos.
+- DELETE: Eliminar productos.
 ------------------------------------------------------------------------
 ## 👤 author
 
 Daniel Elias Alvarez Diaz
-
-------------------------------------------------------------------------
-
-## 🔗 Repository
-
-👉 https://github.com/Dan623280/Historia_de_usario_js.git
